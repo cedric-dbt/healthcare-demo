@@ -41,8 +41,8 @@ monthly as (
 
 select
     h.sales_date,
-    h.total_hourly_ibuprofen_sales,
-    h.total_hourly_acetaminophen_sales,
+    round(h.total_hourly_ibuprofen_sales, 2) as total_hourly_ibuprofen_sales,
+    round(h.total_hourly_acetaminophen_sales, 2) as total_hourly_acetaminophen_sales,
     h.total_hourly_aspirin_sales,
     h.total_hourly_paracetamol_sales,
     d.total_daily_ibuprofen_sales,
