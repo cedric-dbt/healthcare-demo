@@ -1,0 +1,110 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    description: "Raw data schema containing unprocessed sales and patient data."
+    tables:
+      - name: sales_daily
+        description: "Daily aggregated sales data."
+        columns:
+          - name: datum
+            description: "Date of the sale."
+          - name: M01AB
+            description: "Sales of ibuprofen."
+          - name: M01AE
+            description: "Sales of acetaminophen."
+          - name: N02BA
+            description: "Sales of aspirin."
+          - name: N02BE
+            description: "Sales of paracetamol."
+          - name: N05B
+            description: "Sales of antipsychotics."
+          - name: N05C
+            description: "Sales of anxiolytics."
+          - name: R03
+            description: "Sales of respiratory drugs."
+          - name: R06
+            description: "Sales of antihistamines."
+          - name: Year
+            description: "Year of the sale."
+          - name: Month
+            description: "Month of the sale."
+          - name: Hour
+            description: "Hour of the day."
+          - name: Weekday Name
+            description: "Day of the week."
+
+      - name: sales_weekly
+        description: "Weekly aggregated sales data."
+        columns:
+          - name: datum
+            description: "Start date of the sales week."
+          - name: M01AB
+            description: "Weekly sales of ibuprofen."
+          - name: M01AE
+            description: "Weekly sales of acetaminophen."
+          - name: N02BA
+            description: "Weekly sales of aspirin."
+          - name: N02BE
+            description: "Weekly sales of paracetamol."
+          - name: N05B
+            description: "Weekly sales of antipsychotics."
+          - name: N05C
+            description: "Weekly sales of anxiolytics."
+          - name: R03
+            description: "Weekly sales of respiratory drugs."
+          - name: R06
+            description: "Weekly sales of antihistamines."
+
+      - name: sales_hourly
+        description: "Hourly sales data."
+        columns:
+          - name: datum
+            description: "Timestamp of the sale."
+          - name: M01AB
+            description: "Hourly sales of ibuprofen."
+          - name: M01AE
+            description: "Hourly sales of acetaminophen."
+          - name: N02BA
+            description: "Hourly sales of aspirin."
+          - name: N02BE
+            description: "Hourly sales of paracetamol."
+          - name: N05B
+            description: "Hourly sales of antipsychotics."
+          - name: N05C
+            description: "Hourly sales of anxiolytics."
+          - name: R03
+            description: "Hourly sales of respiratory drugs."
+          - name: R06
+            description: "Hourly sales of antihistamines."
+          - name: Year
+            description: "Year of the sale."
+          - name: Month
+            description: "Month of the sale."
+          - name: Hour
+            description: "Hour of the day."
+          - name: Weekday Name
+            description: "Day of the week."
+
+      - name: sales_monthly
+        description: "Monthly aggregated sales data."
+        columns:
+          - name: datum
+            description: "Start date of the sales month."
+          - name: M01AB
+            description: "Monthly sales of ibuprofen."
+          - name: M01AE
+            description: "Monthly sales of acetaminophen."
+          - name: N02BA
+            description: "Monthly sales of aspirin."
+          - name: N02BE
+            description: "Monthly sales of paracetamol."
+          - name: N05B
+            description: "Monthly sales of antipsychotics."
+          - name: N05C
+            description: "Monthly sales of anxiolytics."
+          - name: R03
+            description: "Monthly sales of respiratory drugs."
+          - name: R06
+            description: "Monthly sales of antihistamines."
