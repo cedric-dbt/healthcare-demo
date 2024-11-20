@@ -40,6 +40,9 @@ sources:
         columns:
           - name: datum
             description: "Start date of the sales week."
+            data_tests:
+              - not_null
+              - unique
           - name: M01AB
             description: "Weekly sales of ibuprofen."
           - name: M01AE
