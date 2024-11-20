@@ -7,7 +7,7 @@ with patients as (
         count(case when medication = 'Ibuprofen' then 1 end) as ibuprofen_prescriptions,
         count(case when medication = 'Aspirin' then 1 end) as aspirin_prescriptions,
         count(case when medication = 'Paracetamol' then 1 end) as pareacetamol_prescriptions
-    from {{ source('raw', 'patient_data') }}
+    from {{ ref('stg_raw__patient_data') }}
     group by year, month
 ),
 
