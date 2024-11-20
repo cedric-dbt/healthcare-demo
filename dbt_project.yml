@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'healthcare-sales-demo'
+name: 'healthcare_sales_demo'
 version: '1.0.0'
 config-version: 2
 
@@ -36,5 +36,21 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  healthcare-sales-demo:
-    
+  healthcare_sales_demo:
+    raw: # Raw source data
+      schema: raw
+    staging:  # Staging transformations
+      schema: staging
+      materialized: view
+    analytics:  # Analytics-ready models
+      schema: analytics
+      materialized: table
+
+
+seeds:
+  healthcare_sales_demo:
+    +schema: raw
+
+tests:
+  healthcare_sales_demo:
+    +schema: test
