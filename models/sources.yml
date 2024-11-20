@@ -10,6 +10,8 @@ sources:
         columns:
           - name: datum
             description: "Date of the sale."
+            data_tests:
+              - not_null
           - name: M01AB
             description: "Sales of ibuprofen."
           - name: M01AE
@@ -95,6 +97,9 @@ sources:
         columns:
           - name: datum
             description: "Start date of the sales month."
+            data_tests:
+              - not_null
+              - unique
           - name: M01AB
             description: "Monthly sales of ibuprofen."
           - name: M01AE
@@ -117,6 +122,8 @@ sources:
         columns:
           - name: Name
             description: "Patient's full name."
+            data_tests:
+              - not_null
           - name: Age
             description: "Patient's age."
           - name: Gender
