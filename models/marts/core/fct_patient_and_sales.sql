@@ -23,6 +23,18 @@ sales as (
     group by year, month
 )
 
-select * from sales s
+select
+    s.year,
+    s.month,
+    s.total_hourly_ibuprofen_sales,
+    s.total_daily_ibuprofen_sales,
+    s.total_weekly_ibuprofen_sales,
+    s.total_monthly_ibuprofen_sales,
+    p.total_patients,
+    p.avg_billing_amount,
+    p.ibuprofen_prescriptions,
+    p.aspirin_prescriptions,
+    p.pareacetamol_prescriptions
+from sales s
 join patients p
     on s.year = p.year and s.month = p.month
