@@ -54,3 +54,6 @@ seeds:
 tests:
   healthcare_sales_demo:
     +schema: test
+
+dbt-cloud:
+  project-id: 70403103978047
