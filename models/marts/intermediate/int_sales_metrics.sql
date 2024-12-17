@@ -39,7 +39,6 @@ monthly as (
     group by 1
 )
 
-
 select
     h.sales_date,
     round(h.total_hourly_ibuprofen_sales, 2) as total_hourly_ibuprofen_sales,
