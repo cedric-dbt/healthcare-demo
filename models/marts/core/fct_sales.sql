@@ -45,10 +45,28 @@ monthly as (
 select
     h.sales_date,
     h.total_hourly_ibuprofen_sales,
+    h.total_hourly_acetaminophen_sales,
+    h.total_hourly_aspirin_sales,
+    h.total_hourly_paracetamol_sales,
+    
     d.total_daily_ibuprofen_sales,
+    d.total_daily_acetaminophen_sales,
+    d.total_daily_aspirin_sales,
+    d.total_daily_paracetamol_sales,
+    
     w.total_weekly_ibuprofen_sales,
-    m.total_monthly_ibuprofen_sales
+    w.total_weekly_acetaminophen_sales,
+    w.total_weekly_aspirin_sales,
+    w.total_weekly_paracetamol_sales,
+    
+    m.total_monthly_ibuprofen_sales,
+    m.total_monthly_acetaminophen_sales,
+    m.total_monthly_aspirin_sales,
+    m.total_monthly_paracetamol_sales
 from hourly h
-left join daily d on h.sales_date = d.sales_date
-left join weekly w on date_trunc('week', h.sales_date) = w.sales_week
-left join monthly m on date_trunc('month', h.sales_date) = m.sales_month
+left join daily d 
+    on h.sales_date = d.sales_date
+left join weekly w 
+    on date_trunc('week', h.sales_date) = w.sales_week
+left join monthly m 
+    on date_trunc('month', h.sales_date) = m.sales_month
